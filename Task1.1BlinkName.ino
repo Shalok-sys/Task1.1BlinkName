@@ -8,7 +8,7 @@ void setup() {
 }
 
 void loop() {
-  if(digitalRead(button_pin) == HIGH){
+  if(digitalRead(button_pin) == HIGH){ // This code is kept inside the loop so that if the button is pressed again the led will start to blink the name from the beginning.
     dotOnLED();
     spaceBWLetterpart();
     dotOnLED();
@@ -69,7 +69,7 @@ void loop() {
 
 
 
-
+// creating different programs for all the instances that are activated while communicating in morse code.
 void dotOnLED(){
     digitalWrite(LED_BUILTIN, HIGH);
     delay(1000);
